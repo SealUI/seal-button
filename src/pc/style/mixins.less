@@ -1,0 +1,164 @@
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button,
+html input[type="button"]{
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button,
+input[type="button"]{
+  cursor: pointer;
+}
+.border-radius(@radius){
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius: @radius;
+}
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select; // IE10+
+          user-select: @select;
+}
+
+
+
+
+.seal-btn * {
+    margin:0;
+    padding:0;
+}
+
+.seal-btn {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    height:@height-default;
+    line-height:@line-height-default;
+    cursor: pointer;
+    font-size: @font-size;
+    font-family: @font-family;
+    font-weight: @font-weight;
+    .border-radius(@border-radius);
+    border:@border-default;
+    margin:0;
+    padding: 0 @paddingH;
+    *zoom: 1;
+    *overflow: visible; 
+    background-image: none; 
+    outline:0 none;
+    background-color:@color-default;
+    color:@color-text;
+    transition:@transition; 
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    .box-sizing(border-box);
+    .user-select(none);
+    -webkit-font-smoothing: antialiased;
+    &:hover,
+    &:focus{
+      text-decoration: none;
+      background-image: none;
+      background-color:@color-default-active;
+      color:#fff;
+    }
+    &:active {
+      position: relative;
+      background-color:@color-default-active;
+      color:#fff;
+    }
+    & .nm-btn-text {
+      background: none;
+      padding: 0;
+      height: auto;
+      line-height: auto;
+    }
+    & i {
+        font-style: normal;
+        font-weight: 500;
+        opacity: 0.6;
+        vertical-align:top;
+        background-color: rgba(0,0,0,.2);
+        height:100%;
+        width:@height-default;
+        margin-left:-@paddingH;
+        line-height:@height-default;
+        .border-radius(@border-radius 0 0 @border-radius);
+    }
+    & span{
+        padding-left:0;
+        padding-right:@paddingH;
+    }
+    & i ~ span{
+        padding-left:@paddingH;
+        padding-right:0;
+    }
+    & span ~ i{
+        margin-left:0;
+        margin-right:-@paddingH;
+        .border-radius(0 @border-radius @border-radius  0);
+    }
+}
+.seal-btn-l {
+    height:@height-default+12;
+    line-height:@line-height-default+12;
+    font-size: @font-size+4;
+    & i {
+        width:@height-default+12;
+        line-height:@line-height-default+12;
+    }
+}
+
+.seal-btn-m {
+    height:@height-default+8;
+    line-height:@line-height-default+8;
+    font-size: @font-size+2;
+    & i {
+        width:@height-default+8;
+        line-height:@line-height-default+8;
+    }
+}
+
+.seal-btn-s {
+    height:@height-default+2;
+    line-height:@line-height-default+2;
+    font-size:@font-size;
+    & i {
+        width:@height-default+2;
+        line-height:@line-height-default+2;
+    }
+
+}
+.seal-btn-disabled,
+.seal-btn[disabled] {
+    background-color:@color-disabled;
+    color: white;
+    cursor: default;
+    opacity: 1;
+    pointer-events: none;
+    color:@color-disabled-text;
+    opacity: 0.5;
+    &:hover{
+      background-color:@color-disabled;
+      opacity: 0.5;
+    }
+}
+
+input.seal-btn-text,
+button.seal-btn-text {
+    *vertical-align: top; /* for a ie7 bug */
+}

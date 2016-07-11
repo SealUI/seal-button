@@ -1,0 +1,27 @@
+#system
+.DS_Store
+
+# editor
+.idea
+
+# node.js
+npm-debug.log
+node_modules/
+*.db
+*.bak
+*.tmp
+*.cmd
+~*
+
+# Logs
+logs
+*.log
+
+# bower
+.bower-cache
+.bower-registry
+bower_components
+
+# dist
+dist/*.html
+*.html
