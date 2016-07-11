@@ -1,6 +1,6 @@
 
 // 主色
-@color-default    :   #34495E;
+@color-default    :   #fff;
 @color-primary    :   #23b7e5;
 @color-danger     :   #f05050;
 @color-warning    :   #F1C40F;
@@ -10,17 +10,17 @@
 @color-text       :   #fff;
 @color-disabled-text :   #ECF0F1;
 //active颜色
-@color-default-active   : #2C3E50;
+@color-default-active   : darken(@color-default, 1%);
 @color-primary-active   : darken(@color-primary, 10%);
-@color-primary-disabled : lighten(@color-primary, 30%);
+@color-primary-disabled : lighten(@color-primary, 20%);
 @color-danger-active    : darken(@color-danger, 10%);
-@color-danger-disabled  : lighten(@color-danger, 30%);
+@color-danger-disabled  : lighten(@color-danger, 20%);
 @color-warning-active   : darken(@color-warning, 10%);
-@color-warning-disabled : lighten(@color-warning, 30%);
+@color-warning-disabled : lighten(@color-warning, 20%);
 @color-success-active   : darken(@color-success, 8%);
-@color-success-disabled : lighten(@color-success, 30%);
+@color-success-disabled : lighten(@color-success, 20%);
 @color-dark-active      : darken(@color-dark, 8%);
-@color-dark-disabled    : lighten(@color-dark, 30%);
+@color-dark-disabled    : lighten(@color-dark, 20%);
 // radius
 @border-radius          : 2px;
 // fonts
@@ -31,11 +31,11 @@
 // height
 @line-height-default    : 22px;
 @height-default         : 24px;
-@paddingH               : 12px;
+@paddingH               : 16px;
 @paddingV               : unit(@paddingH / 2,px);
 // border
 @border-default-width   : 1px;
-@border-default-color   : transparent;
+@border-default-color   : #dee5e7;
 @border-default         : @border-default-width solid @border-default-color;
 
 @transition            : border .25s linear, color .25s linear, background-color .25s linear;

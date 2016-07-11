@@ -1,13 +1,19 @@
 .seal-btn-dark{
     color:@color-text;
     border-color:@color-dark;
+    border-width: 0px;
     background-color: @color-dark;
-    &:hover{
+    &:hover,
+    &:focus{
+      color:#fff;
+    }
+    &:hover,
+    &:active{
         background-color:@color-dark-active;
         border-color:@color-dark-active;
     }
-    &.nm-btn-disabled,
-    &.nm-btn-disabled:hover{
+    &.seal-btn-disabled,
+    &.seal-btn-disabled:hover{
         background-color:@color-dark-disabled;
         border-color:@color-dark-disabled;
     }

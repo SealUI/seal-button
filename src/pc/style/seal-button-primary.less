@@ -1,13 +1,19 @@
 .seal-btn-primary{
     color:@color-text;
     border-color:@color-primary;
+    border-width: 0px;
     background-color: @color-primary;
-    &:hover{
+    &:hover,
+    &:focus{
+      color:#fff;
+    }
+    &:hover,
+    &:active{
         background-color:@color-primary-active;
         border-color:@color-primary-active;
     }
-    &.nm-btn-disabled,
-    &.nm-btn-disabled:hover{
+    &.seal-btn-disabled,
+    &.seal-btn-disabled:hover{
         background-color:@color-primary-disabled;
         border-color:@color-primary-disabled;
     }

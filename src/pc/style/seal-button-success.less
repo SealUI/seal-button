@@ -1,13 +1,19 @@
 .seal-btn-success{
     color:@color-text;
     border-color:@color-success;
+    border-width: 0px;
     background-color: @color-success;
-    &:hover{
+    &:hover,
+    &:focus{
+      color:#fff;
+    }
+    &:hover,
+    &:active{
         background-color:@color-success-active;
         border-color:@color-success-active;
     }
-    &.nm-btn-disabled,
-    &.nm-btn-disabled:hover{
+    &.seal-btn-disabled,
+    &.seal-btn-disabled:hover{
         background-color:@color-success-disabled;
         border-color:@color-success-disabled;
     }

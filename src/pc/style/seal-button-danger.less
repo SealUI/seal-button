@@ -1,13 +1,19 @@
 .seal-btn-danger{
     color:@color-text;
     border-color:@color-danger;
+    border-width: 0px;
     background-color: @color-danger;
-    &:hover{
+    &:hover,
+    &:focus{
+      color:#fff;
+    }
+    &:hover,
+    &:active{
         background-color:@color-danger-active;
         border-color:@color-danger-active;
     }
-    &.nm-btn-disabled,
-    &.nm-btn-disabled:hover{
+    &.seal-btn-disabled,
+    &.seal-btn-disabled:hover{
         background-color:@color-danger-disabled;
         border-color:@color-danger-disabled;
     }

@@ -62,7 +62,7 @@ input[type="button"]{
     background-image: none; 
     outline:0 none;
     background-color:@color-default;
-    color:@color-text;
+    color:#333;
     transition:@transition; 
     -webkit-backface-visibility: hidden;
     overflow: hidden;
@@ -73,26 +73,26 @@ input[type="button"]{
     &:focus{
       text-decoration: none;
       background-image: none;
-      background-color:@color-default-active;
-      color:#fff;
+      color:#666;
     }
     &:active {
       position: relative;
       background-color:@color-default-active;
       color:#fff;
     }
-    & .nm-btn-text {
+    & .seal-btn-text,
+    &.seal-btn-text{
       background: none;
-      padding: 0;
       height: auto;
       line-height: auto;
+      border: 0 none;
     }
     & i {
         font-style: normal;
-        font-weight: 500;
-        opacity: 0.6;
+        font-weight: @font-weight;
+        opacity: 1;
         vertical-align:top;
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0,0,0,.1);
         height:100%;
         width:@height-default;
         margin-left:-@paddingH;
@@ -113,13 +113,17 @@ input[type="button"]{
         .border-radius(0 @border-radius @border-radius  0);
     }
 }
+.seal-btn-rounded{
+    border-radius:@border-radius * 25;
+    padding:0 @paddingH * 2;
+}
 .seal-btn-l {
-    height:@height-default+12;
-    line-height:@line-height-default+12;
+    height:@height-default+16;
+    line-height:@line-height-default+16;
     font-size: @font-size+4;
     & i {
-        width:@height-default+12;
-        line-height:@line-height-default+12;
+        width:@height-default+16;
+        line-height:@line-height-default+16;
     }
 }
 
@@ -134,12 +138,12 @@ input[type="button"]{
 }
 
 .seal-btn-s {
-    height:@height-default+2;
-    line-height:@line-height-default+2;
+    height:@height-default+4;
+    line-height:@line-height-default+4;
     font-size:@font-size;
     & i {
-        width:@height-default+2;
-        line-height:@line-height-default+2;
+        width:@height-default+4;
+        line-height:@line-height-default+4;
     }
 
 }
@@ -151,10 +155,10 @@ input[type="button"]{
     opacity: 1;
     pointer-events: none;
     color:@color-disabled-text;
-    opacity: 0.5;
+    opacity: 0.7;
     &:hover{
       background-color:@color-disabled;
-      opacity: 0.5;
+      opacity: 0.7;
     }
 }
 
